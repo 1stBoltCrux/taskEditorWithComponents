@@ -4,3 +4,4 @@
   <h3>{{currentFocus}}</h3>
   <task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></task-list>
   <app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishedEditing()"></app-edit-task>
+  <new-task (sendTask)="addTask($event)"></new-task>

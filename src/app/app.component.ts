@@ -21,8 +21,11 @@ export class AppComponent {
     new Task('Begin brainstorming possible JavaScript group projects', 2),
     new Task('Add README file to last few Angular repos on GitHub', 2)
   ];
-  // selectedTask = this.masterTaskList;
 
+  addTask(newTask: Task) {
+    this.masterTaskList.push(newTask);
+  }
+  
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
